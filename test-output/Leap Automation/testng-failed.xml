@@ -5,7 +5,8 @@
     <classes>
       <class name="TestCases.DuplicateRetailersMerge">
         <methods>
-          <include name="selectRetailertoEditasDuplicateRetailer"/>
+          <include name="SearchuplicateRetailersList"/>
+          <include name="searchUnVerifiedRetailers"/>
           <include name="MergeDuplicateRetailer1"/>
         </methods>
       </class> <!-- TestCases.DuplicateRetailersMerge -->

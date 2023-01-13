@@ -46,7 +46,7 @@ public class landingPage extends Abstractcomponents{
 	@FindBy(xpath="(//button[@id='DocumentClose'])[1]")
 	WebElement DocumentClose;
 	
-	@FindBy(css="div[id='DistPendingGRNPopup'] div[class='modal-content']")
+	@FindBy(xpath="//div[@id='DistPendingGRNPopup']//div[@class='modal-content']")
 	WebElement PendingGRNAlertPopup;
 	
 	@FindBy(xpath="//div[@id='DistPendingGRNPopup']//button[@id='FoodLicencePopupDocumentClose']")
@@ -63,16 +63,21 @@ public class landingPage extends Abstractcomponents{
 		UserName.sendKeys(Username);
 		Passd.sendKeys(Password);
 		Submit.click();
-		if(AlerttoDist.isDisplayed())
+		
+		if (PendingGRNAlertPopup.isDisplayed())
+		{
+			GRNAlertclose.click();
+		}
+		else if(AlerttoDist.isDisplayed())
 		{
 			DocumentClose.click();
 		}
 		
-		else if(PendingGRNAlertPopup.isDisplayed())
-		{
-			GRNAlertclose.click();
-			
-		}
+//		else if(PendingGRNAlertPopup.isDisplayed())
+//		{
+//			GRNAlertclose.click();
+//			
+//		}
 		return new DashBoard(driver);
 			
 	}

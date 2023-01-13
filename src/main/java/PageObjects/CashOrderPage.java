@@ -18,7 +18,7 @@ public class CashOrderPage extends Abstractcomponents{
 	
 	String docNo;
 	
-	private String invoiceNO;
+	String invoiceNO;
 	
 	SoftAssert softAssert = new SoftAssert();
 			
@@ -32,17 +32,18 @@ public class CashOrderPage extends Abstractcomponents{
 		
 	}
 	
+	public void setInvoiceNo(String invoiceNumber)
+	{
+		
+		this.invoiceNO=invoiceNumber;
+	}
+	
 	public String getInvoiceNo()
 	{
 		return invoiceNO;
 		
 	}
 	
-	public void setInvoiceNo(String invoiceNumber)
-	{
-		
-		this.invoiceNO=invoiceNumber;
-	}
 
 	@FindBy(xpath="//select[@id='DDLTeam']")
 	WebElement TeamSelect;
@@ -56,7 +57,7 @@ public class CashOrderPage extends Abstractcomponents{
 	public void addDivisionTeamdetails()
 	{
 		Select selectteam = new Select(TeamSelect);
-		selectteam.selectByVisibleText("CPD");
+		selectteam.selectByVisibleText("URBAN");
 		Select selectordertype = new Select(OrderType);
 		selectordertype.selectByVisibleText("Retailer Order");
 		waitForAnElementToAppear(Retailer);
@@ -186,7 +187,7 @@ public class CashOrderPage extends Abstractcomponents{
 	@FindBy(xpath="//div[@class='modal-dialog']//button[@id='AlertDialogOKButton']")
 	WebElement AlertOkButton;
 	
-	public String confirmDelivery()
+	public void confirmDelivery()
 	{
 		DeliveryConfirm.click();
 		waitForAnElementToAppear(ConfirmOrder);
@@ -210,7 +211,6 @@ public class CashOrderPage extends Abstractcomponents{
 			System.out.println(successMessage);
 			AlertOkButton.click();
 		}
-		return invoiceNumber;
 		
 	}
 

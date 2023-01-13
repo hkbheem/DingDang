@@ -21,7 +21,7 @@ public class CreateSecondaryOrder extends BaseTest{
 		
 		initializeDriver();
 		landingPage landPage = new landingPage(driver);
-		landPage.LoginToApplication("703680", "*");
+		landPage.LoginToApplication("716854", "*");
 		
 		DashBoard dashboard = new DashBoard(driver);		
 		dashboard.SecondaryOrder();
@@ -29,7 +29,7 @@ public class CreateSecondaryOrder extends BaseTest{
 		CashOrderPage cashorder = new CashOrderPage(driver);
 		//cashorder.CreateSalesOrder(, );
 		cashorder.addDivisionTeamdetails();
-		cashorder.addRetailerDetails("AAPURTI KIRANA");
+		cashorder.addRetailerDetails("A.K.TRADERS");
 		cashorder.addProductstoGrid("[7000543] ANTI WRINKLE CREAM 50g (NP 2003)","1");
 		cashorder.verifyAddedProductDisplay();
 		cashorder.previewInvoiceDetails();
@@ -58,8 +58,8 @@ public class CreateSecondaryOrder extends BaseTest{
 		
 		CashOrderPage CO=new CashOrderPage(driver);
 		CO.addDivisionTeamdetails();
-		CO.addRetailerDetails("AAPURTI KIRANA");
-		CO.addProductstoGrid("[7000548] ANTISEPTIC CREAM 20G","1");
+		CO.addRetailerDetails("A.K.TRADERS");
+		CO.addProductstoGrid("[7000543] ANTI WRINKLE CREAM 50g (NP 2003)","1");
 		CO.previewInvoiceDetails();
 		CO.holdOrder();
 		

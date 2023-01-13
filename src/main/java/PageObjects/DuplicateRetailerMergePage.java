@@ -40,7 +40,7 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	public void verifyTeamandApprovalstatusdrodpwndispaly() throws InterruptedException
 	{
 		searchPanel.click();
-		Thread.sleep(2000);
+		waitForAnElementToAppear(teamDropdown);
 		teamDropdown.isDisplayed();
 		approvalStatusDropdown.isDisplayed();
 		
@@ -67,7 +67,7 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	public void searchDuplicateRetailers(String Team, String Status) throws InterruptedException
 	{
 		teamDropdown.click();
-		Thread.sleep(2000);
+		waitForAnElementToAppear(selectAllStatus);
 		List<WebElement> teams = driver.findElements(By.xpath("//ul[@class='chosen-results']/li"));
 		for(WebElement team : teams)
 		{
@@ -79,7 +79,7 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 		}
 	
 		approvalStatusDropdown.click();
-		Thread.sleep(2000);
+		waitForAnElementToAppear(approvalStatusDropdown);
 		List<WebElement> statuses = driver.findElements(By.xpath("//ul[@class='multiselect-container dropdown-menu']/li/a"));
 		for(WebElement status : statuses)
 		{
@@ -90,7 +90,7 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 			}
 		}
 		
-		Thread.sleep(2000);
+		waitForAnElementToAppear(searchButton);
 		searchButton.click();
 	}
 	
@@ -115,8 +115,8 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 		{
 			if(editorview.getAttribute("class").equalsIgnoreCase("btn btn-sm Edit"))
 			{
-				//waitForElementtobeClickable(editorview);
-				Thread.sleep(4000);
+				waitForElementtobeClickable(editorview);
+				
 				editorview.click();
 				
 			}

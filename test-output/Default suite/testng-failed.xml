@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="rough.Editclickaction">
+      <class name="TestCases.CreateSecondaryOrder">
         <methods>
-          <include name="EditDuplicateRetailer"/>
+          <include name="holdtheOrder"/>
         </methods>
-      </class> <!-- rough.Editclickaction -->
+      </class> <!-- TestCases.CreateSecondaryOrder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

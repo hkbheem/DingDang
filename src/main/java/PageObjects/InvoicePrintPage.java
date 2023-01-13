@@ -32,14 +32,14 @@ public class InvoicePrintPage extends Abstractcomponents{
 	
 	public void verifyRecordDisplayInInvoicePrint()
 	{
-		CashOrderPage cashorder = new CashOrderPage(driver);
-		//String generatedInvoiceNo = cashorder.getInvoiceNo();
-		//String generatedInvoiceNo = cashorder.invoiceNO;
-		System.out.println(cashorder.getInvoiceNo());
-		//System.out.println("generated Invoice No is " + generatedInvoiceNo);
+		CashOrderPage cashorder1 = new CashOrderPage(driver);
+		String generatedInvoiceNo = cashorder1.getInvoiceNo();
+		//String generatedInvoiceNo = cashorder1.invoiceNO;
+		System.out.println(cashorder1.getInvoiceNo());
+		System.out.println("generated Invoice No is " + generatedInvoiceNo);
 		waitForAnElementToAppear(pageTitle);
 		List<WebElement> InvoicePrintGridheaders = driver.findElements(By.xpath("//div[@id='UserReportList_wrapper']/table/thead/tr/th"));
-		for(int i=1;i<=InvoicePrintGridheaders.size();i++)
+		for(int i=0;i<(InvoicePrintGridheaders.size()-1);i++)
 		{
 			WebElement headerName =InvoicePrintGridheaders.get(i);
 			
@@ -58,14 +58,14 @@ public class InvoicePrintPage extends Abstractcomponents{
 				{
 					System.out.println(invoice.getText());
 					 
-//					if(invoiceNum.contains(generatedInvoiceNo))
-//					{
-//						System.out.println(invoiceNum + "Order is displayed in Invoice Print GST");
-//					}
-//					else
-//					{
-//						System.out.println("order not displayed");
-//					}
+					if(invoice.getText().equalsIgnoreCase(generatedInvoiceNo))
+					{
+						System.out.println(invoice + "Order is displayed in Invoice Print GST");
+					}
+					else
+					{
+						System.out.println("order not displayed");
+					}
 				}
 				
 				

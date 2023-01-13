@@ -26,26 +26,29 @@ public class HoldOrderPage extends Abstractcomponents{
 		
 	}
 	
-
 	@FindBy(xpath="//h4[normalize-space()='CashOrder Hold List']")
 	WebElement HoldOrderpageTitle;
-
 	
-	@SuppressWarnings("unlikely-arg-type")
 	public void holdOrders()
 	{
 		waitForAnElementToAppear(HoldOrderpageTitle);
 		List<WebElement> HoldOrderGridheaders =driver.findElements(By.xpath("//div[@id='UserReportList_wrapper']/table/thead/tr/th"));
-		for(int i=1; i<=HoldOrderGridheaders.size();i++)
+		for(int i=0; i<(HoldOrderGridheaders.size()-1);i++)
 		{
-			if(HoldOrderGridheaders.contains("Order Doc No"))
+			if(HoldOrderGridheaders.get(i).getText().contains("Order Doc No"))
 			{
-				System.out.println(HoldOrderGridheaders.get(i));
-				
-								
-//				List<WebElement> DocumentNumbers = driver.findElements(By.xpath("//div[@id='UserReportList_wrapper']/table/tbody/tr/td["+i+"]"));
-//				CashOrder cashO= new CashOrder(driver);
-//				String DocNo = cashO.docNo;
+				System.out.println(HoldOrderGridheaders.get(i).getText());
+				String colno =Integer.toString(i);		
+				List<WebElement> DocumentNumbers = driver.findElements(By.xpath("//div[@id='UserReportList_wrapper']/table/tbody/tr/td["+colno+"]"));
+				CashOrderPage cashO= new CashOrderPage(driver);
+				String DocNo = cashO.docNo;
+				for(WebElement DocumentNo : DocumentNumbers)
+				{
+					if(DocumentNo.getText().equalsIgnoreCase(DocNo))
+						{
+							System.out.println("Holded Order is displayed in Hold Order List Page with Order No " + DocNo);
+						}
+				}
 //				boolean abc = DocumentNumbers.stream().anyMatch(DocumentNo->DocumentNo.getText().equalsIgnoreCase(DocNo));
 //				softAssert.assertTrue(abc);
 			}
