@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-import TestData.TestingData;
+//import TestData.TestingData;
 
 public class stringSplit {
 	
@@ -22,8 +22,8 @@ public class stringSplit {
 //		addNumber abc = new addNumber();
 //		System.out.println(abc.b);
 		
-		TestingData data = new TestingData();
-		data.requireTestData();
+//		TestingData data = new TestingData();
+//		data.requireTestData();
 				
 		
 	}
