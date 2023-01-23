@@ -15,7 +15,7 @@ public class HoldOrderPage extends Abstractcomponents{
 	
 	WebDriver driver;
 	
-	SoftAssert softAssert = new SoftAssert();
+//	SoftAssert softAssert = new SoftAssert();
 		
 	public HoldOrderPage(WebDriver driver) 
 	{

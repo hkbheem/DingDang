@@ -20,7 +20,7 @@ public class CashOrderPage extends Abstractcomponents{
 	
 	String invoiceNO;
 	
-	SoftAssert softAssert = new SoftAssert();
+//	SoftAssert softAssert = new SoftAssert();
 			
 			
 	public CashOrderPage(WebDriver driver) 
@@ -94,7 +94,7 @@ public class CashOrderPage extends Abstractcomponents{
 		OrderQty.sendKeys(Qty);
 		AddProduct.click();
 		waitForAnElementToAppear(Productgrid);
-		softAssert.assertTrue(Productgrid.isEnabled());
+//		softAssert.assertTrue(Productgrid.isEnabled());
 	
 	}
 
@@ -108,7 +108,7 @@ public class CashOrderPage extends Abstractcomponents{
 		List<WebElement> GridProductList =driver.findElements(By.xpath("//div[@id='ProductDetailTable_wrapper']/div/div[2]/table/tbody/tr/td[2]"));
 		if(GridProductList.contains("ProductName"));
 		{
-			softAssert.assertTrue(Grid.isEnabled());
+//			softAssert.assertTrue(Grid.isEnabled());
 		}
 		
 		

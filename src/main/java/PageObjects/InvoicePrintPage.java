@@ -16,7 +16,7 @@ public class InvoicePrintPage extends Abstractcomponents{
 	
 	WebDriver driver;
 	
-	SoftAssert softAssert = new SoftAssert();
+//	SoftAssert softAssert = new SoftAssert();
 		
 	public InvoicePrintPage(WebDriver driver) 
 	{
