@@ -61,7 +61,7 @@ public class StockTransferPage extends Abstractcomponents{
 	WebElement SuccessAlert;
 	
 	
-	@Test
+
 	public void createStockTransfer(String ToDistributor, String Qty) throws InterruptedException
 	{
 		waitForAnElementToAppear(StockTransferPageTitle);

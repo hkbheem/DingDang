@@ -7,5 +7,5 @@
 		<class name="TestCases.CreateSecondaryOrder"></class>
 
     </classes>
-</test> <!-- Test ----->
+</test> <!-- Test -->
 </suite> <!-- Suite -->

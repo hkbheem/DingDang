@@ -34,7 +34,6 @@ public class Expense extends Abstractcomponents{
 	WebElement MonthSelect;
 	
 	
-	@Test
 	public void verifyAllTeamsdisplay()
 	{
 		boolean found=false;
@@ -51,7 +50,6 @@ public class Expense extends Abstractcomponents{
 		
 	}
 	
-	@Test
 	public void addNewExpense()
 	{
 		
@@ -64,8 +62,7 @@ public class Expense extends Abstractcomponents{
 				
 	}
 	
-	
-	@Test
+
 	public void verifyAddedExpense()
 	{
 		

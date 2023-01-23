@@ -56,7 +56,7 @@ public class landingPage extends Abstractcomponents{
 
 	By primaryOrder = By.xpath("//span[normalize-space()='Primary Order']");
 	
-	@Test
+
 	public DashBoard LoginToApplication(String Username, String Password)
 	{
 		//extent.createTest(result.getMethod().getMethodName());
@@ -85,7 +85,7 @@ public class landingPage extends Abstractcomponents{
 	@FindBy(xpath="//div[@id='alert-box']")
 	WebElement erroralert;
 	
-	@Test
+
 	public void verifyLoginforInvalidCreds(String Username, String Password)
 	{
 		UserName.sendKeys(Username);

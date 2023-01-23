@@ -35,8 +35,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	WebElement approvalStatusDropdown;
 	
 	
-	
-	@Test
 	public void verifyTeamandApprovalstatusdrodpwndispaly() throws InterruptedException
 	{
 		searchPanel.click();
@@ -52,7 +50,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	@FindBy(xpath="//button[@class='btn btn-custom btn-refresh']")
 	WebElement refreshButton;
 	
-	@Test
 	public void verifySearchandRefreshbuttondisplay()
 	{
 		searchButton.isDisplayed();
@@ -63,7 +60,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	WebElement selectAllStatus;
 	
 	
-	@Test
 	public void searchDuplicateRetailers(String Team, String Status) throws InterruptedException
 	{
 		teamDropdown.click();
@@ -95,7 +91,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	}
 	
 	
-	@Test
 	public void verifyDuplicateRetailersListDisplay()
 	{
 		List<WebElement> RetailerList=driver.findElements(By.xpath("//tbody/tr"));
@@ -106,7 +101,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	}
 
 
-	@Test
 	public void EditDuplicateRetailer() throws InterruptedException
 	{
 		List<WebElement> actionicon=driver.findElements(By.xpath("//tbody/tr/td[1]/div[1]/a[1]"));
@@ -145,7 +139,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	@FindBy(xpath="//div[@id='RetailerMergePopup']//div[@class='modal-content']")
 	WebElement RetailerMergeDetailsPopup;
 	
-	@Test
 	public void MergeRetailer1details()
 	{
 		waitForAnElementToAppear(RetailerMergeDetailsPopup);
@@ -164,7 +157,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	WebElement PrimaryRetailer2Select;
 	
 	
-	@Test
 	public void MergeRetailer2details()
 	{
 		waitForAnElementToAppear(RetailerMergeDetailsPopup);
@@ -182,7 +174,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	@FindBy(xpath="//button[normalize-space()='Chain Outlet']")
 	WebElement ChainOutlet;
 	
-	@Test
 	public void declareRetailerasChainOutlet()
 	{
 		waitForAnElementToAppear(RetailerMergeDetailsPopup);
@@ -199,7 +190,6 @@ public class DuplicateRetailerMergePage extends Abstractcomponents{
 	@FindBy(xpath="//button[normalize-space()='Non Duplicate']")
 	WebElement NonDuplicate;
 	
-	@Test
 	public void declareRetailerasNonDuplicate()
 	{
 		waitForAnElementToAppear(RetailerMergeDetailsPopup);

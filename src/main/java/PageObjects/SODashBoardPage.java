@@ -33,7 +33,6 @@ public class SODashBoardPage extends Abstractcomponents{
 	
 	
 	
-	@Test
 	public void verifyMasterMenuDisplay() throws InterruptedException
 	{
 		Masters.isDisplayed();
@@ -43,7 +42,7 @@ public class SODashBoardPage extends Abstractcomponents{
 		
 	}
 	
-	@Test
+
 	public void duplicateRetailerMergemenudisplay() throws InterruptedException
 	{
 		
@@ -55,7 +54,6 @@ public class SODashBoardPage extends Abstractcomponents{
 	@FindBy(xpath="//h4[normalize-space()='Duplicate Retailer Merge']")
 	WebElement pageHeader;
 	
-	@Test
 	public void openDuplicateRetailersMergerPage() throws InterruptedException
 	{
 		
